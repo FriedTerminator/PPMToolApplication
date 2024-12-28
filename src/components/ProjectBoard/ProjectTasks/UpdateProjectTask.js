@@ -18,7 +18,7 @@ class UpdateProjectTask extends Component {
             priority: "",
             dueDate: "",
             projectIdentifier: "",
-            created_At: "",
+            create_At: "",
             errors: {}
         };
         this.onChange = this.onChange.bind(this);
@@ -31,13 +31,12 @@ class UpdateProjectTask extends Component {
       }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps);
         if(nextProps.errors) {
             this.setState({errors: nextProps.errors});
         }
 
-        const {id, projectSequence, summary, acceptanceCriteria, status, priority, dueDate, projectIdentifier, created_At} = nextProps.projectTask;
-        this.setState({id, projectSequence, summary, acceptanceCriteria, status, priority, dueDate, projectIdentifier, created_At});
+        const {id, projectSequence, summary, acceptanceCriteria, status, priority, dueDate, projectIdentifier, create_At} = nextProps.project_task;
+        this.setState({id, projectSequence, summary, acceptanceCriteria, status, priority, dueDate, projectIdentifier, create_At});
     }
 
     onChange(e) {
