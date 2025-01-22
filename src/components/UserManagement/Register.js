@@ -26,7 +26,7 @@ class Register extends Component {
     }
 
     onChange(e) {
-        this.setState({ [e.target.name]: e.target.name})
+        this.setState({ [e.target.name]: e.target.value });
     }
 
     onSubmit(e) {
@@ -61,7 +61,7 @@ class Register extends Component {
                                 )}
                             </div>
                             <div className="form-group">
-                                <input type="email" className={classnames("form-control form-control-lg", {
+                                <input type="text" className={classnames("form-control form-control-lg", {
                                     "is-invalid": errors.username
                                 })} placeholder="Email Address (Username)" name="username" value={this.state.username} onChange={this.onChange} />
                                 {errors.username && (
