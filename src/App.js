@@ -34,6 +34,7 @@ class App extends Component {
             {
               //Private Routes
             }
+            
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/addProject" component={AddProject} />
             <Route exact path="/updateProject/:id" component={UpdateProject}/>
