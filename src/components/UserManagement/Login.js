@@ -31,12 +31,12 @@ class Login extends Component {
     onSubmit(e) {
         e.preventDefault();
 
-        const user = {
+        const LoginRequest = {
             username: this.state.username,
             password: this.state.password
         }
 
-        this.props.login(user);
+        this.props.login(LoginRequest);
     }
 
   render() {
