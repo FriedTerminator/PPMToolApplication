@@ -10,3 +10,4 @@ export default combineReducers({
   backlog: backlogReducer,
   security: securityReducer
 });
+

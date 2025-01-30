@@ -6,7 +6,6 @@ import {login} from "../../actions/securityActions";
 
 class Login extends Component {
     constructor() {
-        console.log("hi");
         super();
 
         this.state = {
@@ -15,7 +14,6 @@ class Login extends Component {
             errors: {}
         }
 
-        console.log("hi2");
         this.onChange = this.onChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     }
@@ -23,6 +21,10 @@ class Login extends Component {
     componentWillReceiveProps(nextProps) {
         if(nextProps.security.validToken) {
             this.props.history.push("/dashboard");
+        }
+
+        if(nextProps.errors) {
+            this.setState({ errors: nextProps.errors });
         }
     }
 
